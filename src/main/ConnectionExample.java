@@ -11,7 +11,7 @@ public class ConnectionExample {
          {
              String userName = "bil372test";
              String password = "test";
-             String url = "jdbc:mysql://10.10.114.143/bil372test";
+             String url = "jdbc:mysql://mefu.mine.nu/bil372test";
              Class.forName ("com.mysql.jdbc.Driver").newInstance();
              conn = DriverManager.getConnection (url, userName, password);
              System.out.println ("Database connection established");
