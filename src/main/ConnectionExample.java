@@ -24,12 +24,18 @@ public class ConnectionExample {
          {
              if (conn != null)
              {
+            	 Statement stmt = null;
+            	 String qry="select * from test";
                  try
                  {
+                	 stmt=conn.createStatement();
+                	 ResultSet rs = stmt.executeQuery(qry);
+                	 while(rs.next())
+                		 System.out.println(rs.getString("test1"));
                      conn.close ();
                      System.out.println ("Database connection terminated");
                  }
-                 catch (Exception e) { /* ignore close errors */ }
+                 catch (Exception e) {/* ignore close errors */ }
              }
          }
 	}
